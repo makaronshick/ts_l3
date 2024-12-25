@@ -102,7 +102,7 @@ class Group {
     this.students.push(student);
   }
 
-  removeStudentById(id: number): void {
+  removeStudentById(id: number): void | never {
     const index = this.students.findIndex((student) => student.id === id);
 
     if (!~index) {
